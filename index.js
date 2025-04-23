@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 8080;
+const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hotel Management Microservice is running!');
+  res.send('Welcome to the Hotel Management System! ');
 });
 
-app.listen(PORT, () => {
-  console.log(`Service is listening on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Hotel app is running on port ${port}`);
 });

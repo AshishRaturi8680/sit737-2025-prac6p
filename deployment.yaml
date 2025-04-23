@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hotel-management
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hotel-management
+  template:
+    metadata:
+      labels:
+        app: hotel-management
+    spec:
+      containers:
+      - name: hotel-management
+        image: ashish8680/hotel-management  # replace with your Docker Hub image if different
+        ports:
+        - containerPort: 3000
